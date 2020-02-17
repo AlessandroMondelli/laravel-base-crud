@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title','Home Laravel Videogames')
+@section('title','Aggiungi Laravel Videogame')
 
 @section('content')
     <div id="create">
