@@ -10910,6 +10910,23 @@ header h1 {
   margin: 0 auto;
 }
 
+main .upper-btn {
+  margin: 25px 0;
+}
+
+main .videogame-card {
+  padding: 0 10px;
+  margin-bottom: 25px;
+}
+
+main .videogame-card form {
+  display: inline-block;
+}
+
+footer {
+  margin-top: 150px;
+}
+
 footer #bool-footer {
   padding: 70px 0;
   background-color: lightgrey;

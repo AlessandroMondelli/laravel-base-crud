@@ -7,6 +7,11 @@
     <div id="create">
         <div class="container">
             <div class="row">
+                <div class="col-lg-12">
+                    <a href="{{ route('videogames.index') }}" class="btn btn-info float-right upper-btn">Home</a>
+                </div>
+            </div>
+            <div class="row">
                 <form action="{{ route('videogames.update',['videogame'=>$videogame->id]) }}" method="post">
                     @csrf
                     @method('PUT')

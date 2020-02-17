@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <a href="{{ route('videogames.index') }}" class="btn btn-info float-right">Home</a>
+                    <a href="{{ route('videogames.index') }}" class="btn btn-info float-right upper-btn">Home</a>
                 </div>
             </div>
             <div class="row">
