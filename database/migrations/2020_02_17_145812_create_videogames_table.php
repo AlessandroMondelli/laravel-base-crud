@@ -17,7 +17,7 @@ class CreateVideogamesTable extends Migration
             $table->bigIncrements('id');
             $table->char('title',50);
             $table->char('platform',30);
-            $table->integer('pegi');
+            $table->integer('pegi')->nullable();
             $table->float('prezzo',5,2)->default(0);
             $table->timestamps();
         });

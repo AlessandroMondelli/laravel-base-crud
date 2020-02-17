@@ -1,0 +1,33 @@
+footer {
+
+    #bool-footer {
+        padding: 70px 0;
+        background-color: lightgrey;
+
+        .upper-footer {
+            border-bottom: 1px solid white;
+
+            p {
+                margin-bottom: 4px;
+            }
+
+            ul {
+                list-style-type: none;
+
+                li {
+                    font-size: 20px;
+                }
+            }
+
+            i {
+                font-size: 36px;
+                margin-bottom: 15px;
+                margin-right: 35px;
+
+                &:hover {
+                    color: lightblue;
+                }
+            }
+        }
+    }
+}

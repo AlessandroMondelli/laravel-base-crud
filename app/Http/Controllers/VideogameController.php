@@ -7,78 +7,43 @@ use Illuminate\Http\Request;
 
 class VideogameController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $videogame = Videogame::all();
         return view('videogames.index',['videogames' => $videogame]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('videogames.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $form_data = $request->all(); //Prendo tutti i nuovi dati dal form
+        $videogame = new Videogame(); //Creo nuovo elemento
+
+        $videogame->fill($form_data); //Riempio dati per db
+        $videogame->save(); //Salvo nel db
+
+        return redirect()->route('videogames.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Videogame  $videogame
-     * @return \Illuminate\Http\Response
-     */
     public function show(Videogame $videogame)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Videogame  $videogame
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Videogame $videogame)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Videogame  $videogame
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Videogame $videogame)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Videogame  $videogame
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Videogame $videogame)
     {
         //

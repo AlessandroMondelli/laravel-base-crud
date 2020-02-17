@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Videogame extends Model
 {
-    //
+    protected $fillable = ['title', 'platform','pegi', 'prezzo'];
 }
