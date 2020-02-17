@@ -36,12 +36,14 @@ class VideogameController extends Controller
 
     public function edit(Videogame $videogame)
     {
-        //
+        return view('videogames.edit',['videogame' => $videogame]);
     }
 
     public function update(Request $request, Videogame $videogame)
     {
-        //
+        $form_data = $request->all(); //Prendo tutti i nuovi dati dal form
+        $videogame->update($form_data); //Aggiorno dati
+        return redirect()->route('videogames.index'); //Indirizzo all'index
     }
 
     public function destroy(Videogame $videogame)

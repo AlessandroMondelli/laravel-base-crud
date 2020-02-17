@@ -3,10 +3,11 @@
 @section('title','Aggiungi Laravel Videogame')
 
 @section('content')
+<main>
     <div id="create">
         <div class="container">
             <div class="row">
-                <form class="" action="{{ route('videogames.store') }}" method="post">
+                <form action="{{ route('videogames.store') }}" method="post">
                     @csrf
                     <div class="form-group">
                         <label for="tipo">Titolo Videogioco</label>
@@ -31,4 +32,5 @@
             </div>
         </div>
     </div>
+</main>
 @endsection

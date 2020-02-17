@@ -20,7 +20,8 @@
                         <p class="card-text">Piattaforma: {{ $videogame->platform }}</p>
                         <p class="card-text">PEGI: {{ $videogame->pegi }}</p>
                         <p class="card-text">Prezzo: {{ $videogame->prezzo }}</p>
-                        <a href="#" class="btn btn-primary">Acquista ora</a>
+                        <a href="{{ route('videogames.show',['videogame'=>$videogame->id]) }}" class="btn btn-primary">Dettagli</a>
+                        <a href="{{ route('videogames.edit',['videogame'=>$videogame->id]) }}" class="btn btn-primary">Modifica</a>
                       </div>
                     </div>
                 </div>
